@@ -154,15 +154,15 @@ for itr in range(0, len(num_list)):
         
         if nrmse_val <= 0.5:
             writer = sitk.ImageFileWriter()
-            writer.SetFileName('/cluster/home/t122378uhn/map/' + diag_path[i].split('/')[7] + '_fixed_image.nii.gz')
+            writer.SetFileName('./map/' + diag_path[i].split('/')[7] + '_fixed_image.nii.gz')
             writer.Execute(fixed)
 
             writer_2 = sitk.ImageFileWriter()
-            writer_2.SetFileName('/cluster/home/t122378uhn/map/' + diag_path[i].split('/')[7] + '_moving_image.nii.gz')
+            writer_2.SetFileName('./map/' + diag_path[i].split('/')[7] + '_moving_image.nii.gz')
             writer_2.Execute(moving)
 
             writer_3 = sitk.ImageFileWriter()
-            writer_3.SetFileName('/cluster/home/t122378uhn/map/' + diag_path[i].split('/')[7] + '_out_image.nii.gz')
+            writer_3.SetFileName('./map/' + diag_path[i].split('/')[7] + '_out_image.nii.gz')
             writer_3.Execute(out)
                 
 
